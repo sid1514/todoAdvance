@@ -31,3 +31,22 @@
   bottom: 5%;
   width: 24%;
 }
+
+@media (min-width: 600px) and (max-width: 900px) {
+
+
+  .custome-margin{
+    margin-top: 90%;
+    font-size: smaller;
+  }
+  .custom-image-size{
+    margin-top: -1%;
+    top: 0;
+    width: 10%;
+    height: 10%;
+    font-size: smaller;
+  }
+  .font-size{
+    font-size: smaller;
+  }
+}

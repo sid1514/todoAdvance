@@ -23,7 +23,7 @@ const Login = () => {
     nav("/Signup");
   };
   return (
-    <div className="d-flex justify-content-center align-items-center vh-100 .">
+    <div className="d-flex justify-content-center align-items-center vh-100 text-white">
       <div className="w-50 p-6 shadow-lg border-0">
         <div className="card card-body p-4 md:m-4 border-0 gradient-background">
           <form onSubmit={handleLogin}>

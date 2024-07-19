@@ -8,7 +8,7 @@ const TaskCard = ({ taskName, handleTaskClick }) => {
         <input type="checkbox" className="me-4 " />
         <label>{taskName}</label>
       </div>
-      <div className="col-md-1 p-4 ms-4">
+      <div className="md:col-md-1 p-4 ms-4">
         <Icon name="star outline" size="large" />
       </div>
     </div>

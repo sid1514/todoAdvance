@@ -40,8 +40,8 @@ const TaskAdd = () => {
   };
 
   return (
-    <div className="border-0">
-      <p className="border-bottom">To Do</p>
+    <div className="border-0 font-size">
+      <p className="border-bottom ">To Do</p>
       <div className="d-flex flex-column bg-color2">
         <input
           type="text"

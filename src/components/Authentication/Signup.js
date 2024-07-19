@@ -63,7 +63,7 @@ const Signup = () => {
               required
             />
           </div>
-          <button type="submit" className="btn btn-primary btn-block w-25">
+          <button type="submit" className="btn btn-primary btn-block md:w-25">
             Signup
           </button>
         </form>

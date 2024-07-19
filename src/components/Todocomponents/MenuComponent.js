@@ -21,7 +21,7 @@ const MenuComponent = ({toggleValue}) => {
           !toggleValue ? "w-auto" : null
         } bg-color h-auto`}
       >
-        <div className="border-top d-flex row mt-4">
+        <div className="border-top d-flex row mt-4 font-size">
           <div className="p-4 col-md-8 ">
             <input type="checkbox" className="me-4 " />
             <label>

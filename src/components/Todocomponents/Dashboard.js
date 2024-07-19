@@ -49,7 +49,7 @@ const Dashboard = ( { toggleSidBar }) => {
 
   return (
     <div className="container-fluid">
-      <div className="row position-relative">
+      <div className="row position-relative ">
         {toggleSidBar ? <Sidebar /> : null}
         <div
           className={`${
@@ -91,7 +91,7 @@ const Sidebar = () => {
   return (
     <div className="ms-2 col-md-3 d-flex flex-column align-items-center p-4 ">
       <div
-        className="align-items-center d-flex flex-column z-1 position-absolute top-0 "
+        className="custom-image-size align-items-center d-flex flex-column z-1 position-absolute top-0 "
         style={{ marginTop: "1%" }}
       >
         <img
@@ -107,7 +107,7 @@ const Sidebar = () => {
         style={{ marginTop: "10%", width: "70%", paddingTop: "30%" }}
       >
         <div
-          className="mt-4 pt-4 border-0 p-2 w-100 d-flex flex-column text-start bg-white rounded"
+          className="custome-margin md:mt-4 pt-4 border-0 p-2 w-100 d-flex flex-column text-start bg-white rounded"
           style={{ paddingTop: "40%" }}
         >
           <p>
@@ -126,10 +126,10 @@ const Sidebar = () => {
             <Icon name="clipboard check" /> Assigned to me
           </p>
         </div>
-        <div className="my-4 border-0 py-4 text-start bg-white">
+        <div className="my-4 border-0 py-4 text-start bg-white font-size">
           <Icon name="add" /> Add list
         </div>
-        <div className="text-start border-0 p-2 bg-white">
+        <div className="text-start border-0 p-2 bg-white font-size">
           <p className="fw-semibold">Today Task</p>
           <p className="border-bottom pb-2">11</p>
           <div className="d-flex justify-content-center border-0 w-100">
