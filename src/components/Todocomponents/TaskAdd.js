@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Icon } from "semantic-ui-react";
 import TaskCard from "./TaskCard";
 import { useDispatch, useSelector } from "react-redux";
-import { deselectTask, loadTasks, saveTask, setClickedTask } from "../state/Action";
+import { deselectTask, loadTasks, saveTask, setClickedTask, toggleBoolean } from "../state/Action";
 
 const TaskAdd = () => {
   const [task, setTask] = useState("");
