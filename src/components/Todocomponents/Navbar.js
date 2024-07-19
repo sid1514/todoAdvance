@@ -5,13 +5,18 @@ import { Icon } from "semantic-ui-react";
 import { useDispatch } from "react-redux";
 import { toggleBoolean } from "../state/Action";
 
-const Navbar = () => {
+const Navbar = ({ toggleSidBar, setSideBar }) => {
   const dispatch = useDispatch();
 
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light m-3">
       <div className="container-fluid">
-        <Icon name="bars" size="large" className="pe-4" />
+        <Icon
+          name="bars"
+          size="large"
+          className="pe-4"
+          onClick={() => setSideBar(!toggleSidBar)}
+        />
         <a className="navbar-brand d-flex align-items-center" href="#">
           <img
             src="Union.png"

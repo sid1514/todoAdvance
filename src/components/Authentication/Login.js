@@ -10,16 +10,11 @@ const Login = () => {
 
   const loginError = useSelector((state) => state.loginError);
   const nav = useNavigate();
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
-    try {
-      dispatch(login({ username, password }));
-      if (!loginError) {
-        nav("/Maincomp");
-      }
-    } catch (error) {
-      console.log("invalid");
-    }
+    dispatch(login({ username, password }));
+    nav("/Maincomp");
+    console.log("invalid");
     setUsername("");
     setPassword("");
   };
@@ -58,7 +53,10 @@ const Login = () => {
                 required
               />
             </div>
-            <button type="submit" className="btn btn-success md:w-25 mb-2 shadow-lg">
+            <button
+              type="submit"
+              className="btn btn-success md:w-25 mb-2 shadow-lg"
+            >
               Login
             </button>
           </form>

@@ -3,9 +3,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { Icon } from "semantic-ui-react";
 import { deleteTask, logout, toggleBoolean } from "../state/Action";
 
-const MenuComponent = () => {
- const selectedTask = useSelector((state) => state.tasks.selectedTask);
-  const dispatch = useDispatch()
+const MenuComponent = ({toggleValue}) => {
+  const selectedTask = useSelector((state) => state.tasks.selectedTask);
+  const dispatch = useDispatch();
   const handleDeleteClick = (id) => {
     dispatch(deleteTask(id));
   };
@@ -16,17 +16,23 @@ const MenuComponent = () => {
 
   return (
     <>
-      <div className="col-md-2 ms-4 ps-2 ">
+      <div
+        className={`col-md-3 ps-2 ${
+          !toggleValue ? "w-auto" : null
+        } bg-color h-auto`}
+      >
         <div className="border-top d-flex row mt-4">
           <div className="p-4 col-md-8 ">
             <input type="checkbox" className="me-4 " />
-            <label>{selectedTask?selectedTask.name:"no task selected"}</label>
+            <label>
+              {selectedTask ? selectedTask.name : "no task selected"}
+            </label>
           </div>
           <div className="col-md-3 p-4 ms-4">
             <Icon name="star outline" size="large" />
           </div>
         </div>
-        <div className="border-top d-flex col p-2 pt-4 pb-4">
+        <div className="border-top d-flex col p-2 pt-4 pb-4 position-relative ">
           <Icon name="add" size="large" />
           <label className="ps-3">Add Step</label>
         </div>
@@ -45,16 +51,16 @@ const MenuComponent = () => {
         <div className="border-top d-flex col ps-4 ms-2 pt-4">
           <label className="ps-4"> Add Notes</label>
         </div>
-        <div className="position-absolute top-50 mt-4 d-flex align-center border-top">
+        <div className="position_below d-flex align-center border-top">
           <div
-            className=" pt-4 col-md-5"
+            className=" pt-4 col-md-4"
             onClick={() => dispatch(toggleBoolean())}
           >
             <Icon name="cancel" size="large" />
           </div>
-          <div className=" pt-4 col-md-6">Created Today</div>
+          <div className=" pt-4 col-md-6 ">Created Today</div>
           <div
-            className=" pt-4 ms-4 ps-4 col-md-4"
+            className="pt-4 col-md-3 ps-4"
             onClick={() => handleDeleteClick(selectedTask.id)}
           >
             <Icon name="trash" size="large" />

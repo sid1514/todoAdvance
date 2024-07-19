@@ -1,3 +1,7 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
 .gradient-background {
   background: linear-gradient(to right, #0e730e, #e6ebe6);
   /* Adjust the direction and colors as needed */
@@ -5,4 +9,25 @@
 .gradient-background2 {
   background: linear-gradient(to right,#e6ebe6,  #0e730e);
   /* Adjust the direction and colors as needed */
+}
+
+.bg-color{
+  background-color:  #4ec66c2f;
+}
+
+.bg-color2{
+ background: linear-gradient(to bottom,#c1e2c1,  #02191016);
+  /* Adjust the direction and colors as needed */
+}
+.bg-colorinput{
+  background-color: #e1eae716
+}
+.bt-color{
+  background-color: #0b460b24;
+}
+
+.position_below{
+  position: absolute;
+  bottom: 5%;
+  width: 24%;
 }

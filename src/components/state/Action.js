@@ -24,7 +24,6 @@ export const logout = () => {
    });
  };
 };
-// src/actions/index.js
 
 export const toggleBoolean = () => {
   return {
