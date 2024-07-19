@@ -13,8 +13,8 @@ import {
 const TaskAdd = () => {
   const [task, setTask] = useState("");
   const dispatch = useDispatch();
-  const tasks = useSelector((state) => state.tasks);
-  const selectedTask = useSelector((state) => state.selectedTask);
+  const tasks = useSelector((state) => state.tasks.tasks);
+  const selectedTask = useSelector((state) => state.tasks.selectedTask);
   useEffect(() => {
     dispatch(loadTasks());
   }, [dispatch]);
@@ -63,9 +63,9 @@ const TaskAdd = () => {
         </div>
       </div>
       <div onClick={() => dispatch(toggleBoolean())}>
-        {tasks.map((t) => (
+        {tasks?tasks.map((t) => (
           <TaskCard taskName={t.name} handleTaskClick={handleTaskClick(t.id)} />
-        ))}
+        )):null}
       </div>
     </div>
   );

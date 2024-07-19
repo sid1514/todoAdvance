@@ -21,10 +21,10 @@ const Signup = () => {
   };
   return (
     <div className="container mt-5 w-50 fw-semibold ">
-      <div className="row justify-content-center shadow-lg ">
+      <div className=" row justify-content-center shadow-lg ">
         <form
           onSubmit={handleSignup}
-          className="card card-body mt-4 row-gap-4 border-0 p-5"
+          className="gradient-background2 card card-body row-gap-4 border-0 p-5"
         >
           <h2 className="text-center">Signup</h2>
           <div className="form-group">

@@ -1,0 +1,8 @@
+.gradient-background {
+  background: linear-gradient(to right, #0e730e, #e6ebe6);
+  /* Adjust the direction and colors as needed */
+}
+.gradient-background2 {
+  background: linear-gradient(to right,#e6ebe6,  #0e730e);
+  /* Adjust the direction and colors as needed */
+}

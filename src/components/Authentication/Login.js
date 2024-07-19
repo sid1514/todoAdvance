@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { login, logout } from "../state/Action";
 import { useNavigate } from "react-router-dom";
+
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -27,9 +28,9 @@ const Login = () => {
     nav("/Signup");
   };
   return (
-    <div className="d-flex justify-content-center align-items-center vh-100 ">
+    <div className="d-flex justify-content-center align-items-center vh-100 .">
       <div className="w-50 p-6 shadow-lg border-0">
-        <div className="card card-body p-4">
+        <div className="card card-body p-4 md:m-4 border-0 gradient-background">
           <form onSubmit={handleLogin}>
             <h2 className="text-center">Login</h2>
             {loginError && <p style={{ color: "red" }}>{loginError}</p>}
@@ -57,7 +58,7 @@ const Login = () => {
                 required
               />
             </div>
-            <button type="submit" className="btn btn-success w-25 mb-2 ">
+            <button type="submit" className="btn btn-success md:w-25 mb-2 shadow-lg">
               Login
             </button>
           </form>

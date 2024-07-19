@@ -4,7 +4,7 @@ import { Icon } from "semantic-ui-react";
 import { deleteTask, logout, toggleBoolean } from "../state/Action";
 
 const MenuComponent = () => {
- const selectedTask = useSelector((state) => state.selectedTask);
+ const selectedTask = useSelector((state) => state.tasks.selectedTask);
   const dispatch = useDispatch()
   const handleDeleteClick = (id) => {
     dispatch(deleteTask(id));

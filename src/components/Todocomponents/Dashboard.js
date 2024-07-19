@@ -23,7 +23,7 @@ ChartJS.register(
   LinearScale
 );
 const Dashboard = () => {
-  const booleanValue = useSelector((state) => state.value);
+  const booleanValue = useSelector((state) => state.tasks.value);
   console.log(booleanValue);
   const data = {
     labels: ["done", "pending"],

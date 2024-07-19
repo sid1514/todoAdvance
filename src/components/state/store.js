@@ -1,10 +1,8 @@
-// store.js
-
+import { createStore, applyMiddleware } from "redux";
 import {thunk} from "redux-thunk";
-import authReducer from "./reducer"; // Ensure this path is correct
-import { applyMiddleware, createStore } from "redux";
+import rootReducer from "./reducer";
 
 
-const store = createStore(authReducer, applyMiddleware(thunk));
+const store = createStore(rootReducer, applyMiddleware(thunk));
 
 export default store;
