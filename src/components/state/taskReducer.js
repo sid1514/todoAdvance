@@ -1,10 +1,4 @@
-import {
-  LOAD_TASKS,
-  SAVE_TASK,
-  DELETE_TASK,
-  SETCLICKTASK,
-  DESELECT_TASK,
-} from "./Action";
+import { DELETE_TASK, DESELECT_TASK, LOAD_TASKS, SAVE_TASK, SETCLICKTASK } from "./Action";
 
 const initialState = {
   tasks: JSON.parse(localStorage.getItem("tasks")) || [],
