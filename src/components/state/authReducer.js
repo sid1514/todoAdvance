@@ -1,7 +1,8 @@
-import { LOGIN, LOGOUT, SIGNUP, TOGGLEMENU } from "./Action";
+import { LOGIN, LOGOUT, SIGNUP, TOGGLEMENU, TOGGLETHEME } from "./Action";
 
 const initialState = {
   isAuthenticated: false,
+  isDarkTheme:false,
   user: null,
   value: false,
   users: JSON.parse(localStorage.getItem("users")) || [],
@@ -49,6 +50,11 @@ const authReducer = (state = initialState, action) => {
       return {
         ...state,
         value: !state.value,
+      };
+    case TOGGLETHEME:
+      return {
+        ...state,
+        isDarkTheme: !state.isDarkTheme,
       };
     default:
       return state;

@@ -2,15 +2,29 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FaSearch} from "react-icons/fa"; // Using react-icons for icons
 import { Icon } from "semantic-ui-react";
-import { useDispatch } from "react-redux";
-import { toggleBoolean } from "../state/Action";
+import { useDispatch, useSelector } from "react-redux";
+import { toggleBoolean, toggleTheme } from "../state/Action";
 
 const Navbar = ({ toggleSidBar, setSideBar }) => {
   const dispatch = useDispatch();
+  const isDarkTheme = useSelector((state) => state.auth.isDarkTheme);
+   const lightTheme = {
+     backgroundColor: "#FFF",
+     color: "#000",
+   };
 
+   const darkTheme = {
+     backgroundColor: "#000",
+     color: "#FFF",
+   };
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light m-3">
-      <div className="container-fluid">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light ">
+      <div
+        className="container-fluid"
+        style={{
+          ...(isDarkTheme ? darkTheme : lightTheme),
+        }}
+      >
         <Icon
           name="bars"
           size="large"
@@ -56,8 +70,8 @@ const Navbar = ({ toggleSidBar, setSideBar }) => {
                 />
               </a>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
+            <li className="nav-item" onClick={() => dispatch(toggleTheme())}>
+              <a className="nav-link">
                 <img
                   src="Vector.png"
                   alt="Logo"

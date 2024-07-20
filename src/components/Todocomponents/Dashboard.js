@@ -23,7 +23,7 @@ ChartJS.register(
   LinearScale
 );
 
-const Dashboard = ( { toggleSidBar }) => {
+const Dashboard = ({ toggleSidBar }) => {
   const toggleValue = useSelector((state) => state.auth.value);
 
   const data = {
@@ -67,6 +67,7 @@ const Dashboard = ( { toggleSidBar }) => {
 };
 
 const Sidebar = () => {
+  const isDarkTheme = useSelector((state) => state.auth.isDarkTheme);
   const data = {
     labels: ["done", "pending"],
     datasets: [
@@ -78,7 +79,15 @@ const Sidebar = () => {
       },
     ],
   };
+  const lightTheme = {
+    backgroundColor: "#FFF",
+    color: "#000",
+  };
 
+  const darkTheme = {
+    backgroundColor: "#000",
+    color: "#FFF",
+  };
   const options = {
     cutout: "54%",
     plugins: {
@@ -107,8 +116,11 @@ const Sidebar = () => {
         style={{ marginTop: "10%", width: "70%", paddingTop: "30%" }}
       >
         <div
-          className="custome-margin md:mt-4 pt-4 border-0 p-2 w-100 d-flex flex-column text-start bg-white rounded"
-          style={{ paddingTop: "40%" }}
+          className="custome-margin md:mt-4 pt-4 border-0 p-2 w-100 d-flex flex-column text-start rounded"
+          style={{
+            ...(isDarkTheme ? darkTheme : lightTheme),
+            paddingTop: "40%",
+          }}
         >
           <p>
             <Icon name="clipboard outline" /> All Tasks
@@ -126,10 +138,20 @@ const Sidebar = () => {
             <Icon name="clipboard check" /> Assigned to me
           </p>
         </div>
-        <div className="my-4 border-0 py-4 text-start bg-white font-size">
+        <div
+          className="my-4 border-0 py-4 text-start font-size"
+          style={{
+            ...(isDarkTheme ? darkTheme : lightTheme),
+          }}
+        >
           <Icon name="add" /> Add list
         </div>
-        <div className="text-start border-0 p-2 bg-white font-size">
+        <div
+          className="text-start border-0 p-2 font-size"
+          style={{
+            ...(isDarkTheme ? darkTheme : lightTheme),
+          }}
+        >
           <p className="fw-semibold">Today Task</p>
           <p className="border-bottom pb-2">11</p>
           <div className="d-flex justify-content-center border-0 w-100">

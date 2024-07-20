@@ -8,19 +8,16 @@ import Maincomp from "./components/Todocomponents/Maincomp";
 import { useState } from "react";
 
 function App() {
-  const [isDarkTheme, setIsDarkTheme] = useState(false);
+  const isDarkTheme = useSelector((state)=>state.auth.isDarkTheme);
 
-  const toggleTheme = () => {
-    setIsDarkTheme((prevTheme) => !prevTheme);
-  };
-
-  const lightTheme = {
+ 
+   const lightTheme = {
     backgroundColor: "#FFF",
     color: "#000",
   
   };
 
-  const darkTheme = {
+   const darkTheme = {
     backgroundColor: "#000",
     color: "#FFF",
    

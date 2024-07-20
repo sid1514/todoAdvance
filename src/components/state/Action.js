@@ -7,7 +7,7 @@ export const LOAD_TASKS = "LOAD_TASKS";
 export const SAVE_TASK = "SAVE_TASK";
 export const DELETE_TASK = "DELETE_TASK";
 export const DESELECT_TASK = "DESELECT_TASK";
-
+export const TOGGLETHEME = "TOGGLETHEME";
 export const login = (user) => {
   return (dispatch) => {
     dispatch({
@@ -28,6 +28,11 @@ export const logout = () => {
 export const toggleBoolean = () => {
   return {
     type: TOGGLEMENU,
+  };
+};
+export const toggleTheme = () => {
+  return {
+    type: TOGGLETHEME,
   };
 };
 
