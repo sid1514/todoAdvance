@@ -7,6 +7,7 @@ const Maincomp = () => {
   return (
     <>
       <Navbar toggleSidBar={toggleSidBar} setSideBar={setSideBar} />
+      
       <Dashboard toggleSidBar={toggleSidBar} />
     </>
   );

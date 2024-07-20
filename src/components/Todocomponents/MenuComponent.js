@@ -19,9 +19,9 @@ const MenuComponent = ({toggleValue}) => {
       <div
         className={`col-md-3 ps-2 ${
           !toggleValue ? "w-auto" : null
-        } bg-color h-auto`}
+        } bg-color MenuCompSize`}
       >
-        <div className="border-top d-flex row mt-4 font-size">
+        <div className="border-top d-flex row md:mt-4 font-size custom_size">
           <div className="p-4 col-md-8 ">
             <input type="checkbox" className="me-4 " />
             <label>
@@ -32,33 +32,33 @@ const MenuComponent = ({toggleValue}) => {
             <Icon name="star outline" size="large" />
           </div>
         </div>
-        <div className="border-top d-flex col p-2 pt-4 pb-4 position-relative ">
+        <div className="border-top d-flex col p-2 pt-4 pb-4 font-size">
           <Icon name="add" size="large" />
           <label className="ps-3">Add Step</label>
         </div>
-        <div className="border-top d-flex col p-2 pt-4">
+        <div className="border-top d-flex col p-2 md:pt-4 font-size">
           <Icon name="bell outline" size="large" />
           <label className="ps-3">Set Reminder</label>
         </div>
-        <div className="border-top d-flex col p-2 pt-4">
+        <div className="border-top d-flex col p-2 md:pt-4 font-size">
           <Icon name="calendar alternate outline" size="large" />
           <label className="ps-3">Add Due Date</label>
         </div>
-        <div className="border-top d-flex col p-2 pt-4">
+        <div className="border-top d-flex col p-2 pt-4 font-size">
           <Icon name="retweet" size="large" />
           <label className="ps-3">Repeat</label>
         </div>
-        <div className="border-top d-flex col ps-4 ms-2 pt-4">
+        <div className="border-top d-flex col ps-4 ms-2 pt-4 font-size">
           <label className="ps-4"> Add Notes</label>
         </div>
-        <div className="position_below d-flex align-center border-top">
+        <div className="position_below d-flex align-center border-top font-size">
           <div
             className=" pt-4 col-md-4"
             onClick={() => dispatch(toggleBoolean())}
           >
             <Icon name="cancel" size="large" />
           </div>
-          <div className=" pt-4 col-md-6 ">Created Today</div>
+          <div className=" pt-4 col-md-6  createdToday">Created Today</div>
           <div
             className="pt-4 col-md-3 ps-4"
             onClick={() => handleDeleteClick(selectedTask.id)}

@@ -48,13 +48,13 @@ const Dashboard = ( { toggleSidBar }) => {
   };
 
   return (
-    <div className="container-fluid">
+    <div className="container-fluid shadow-lg">
       <div className="row position-relative ">
         {toggleSidBar ? <Sidebar /> : null}
         <div
           className={`${
             toggleValue ? "col-md-5" : "col-md-8"
-          } p-3 mt-4 border-0 h-25 ${
+          } p-3 mt-4 border-0 h-25 shadow-lg ${
             !toggleSidBar ? "ms-4 justify-content-center" : "text-start"
           } `}
         >
@@ -103,7 +103,7 @@ const Sidebar = () => {
         <p>Profile Information</p>
       </div>
       <div
-        className="d-flex flex-column ps-4 pe-4 pb-4 border-0 z-0 text-center bg-color"
+        className="d-flex flex-column ps-4 pe-4 pb-4 border-0 z-0 text-center bg-color shadow-lg"
         style={{ marginTop: "10%", width: "70%", paddingTop: "30%" }}
       >
         <div

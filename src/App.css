@@ -50,3 +50,29 @@
     font-size: smaller;
   }
 }
+
+@media  (max-width: 600px) {
+ .font-size{
+    font-size: smaller;
+  }
+  .position_below{
+  position: absolute;
+  bottom: 10%;
+  margin-top: 10%;
+  width: 24%;
+  justify-content: space-between;
+}
+.custom_size{
+  display: flex;
+  flex-direction: row;
+ 
+  padding-top: -10%;
+  margin-top: 1%;
+}
+.MenuCompSize{
+  height: 100vh;
+}
+.createdToday{
+ padding: 10%;
+}
+}
